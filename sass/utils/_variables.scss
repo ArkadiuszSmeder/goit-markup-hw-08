@@ -1,0 +1,19 @@
+$primary-font-family: "Roboto", sans-serif;
+$secondary-font-family: "Raleway", sans-serif;
+
+$colors: (
+  "dark-font": #212121,
+  "light-font": #757575,
+  "light-background": #fff,
+  "quaternary": #afb1b8,
+  "active": #2196f3,
+  "logo-dark": #000,
+  "dark-background": #2f303a,
+  "medium-background": #f5f4fa,
+  "border-primary": #eeeeee,
+  "header-underline": #ECECEC,
+  "svg":#AFB1B8,
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    }
+
+  ul, p, figure, h1, h2, h3, h4, h5, h6 {
+    margin:0;
+    padding: 0;
+    }
+
+  body {
+    font-family: "Roboto", "Raleway", sans-serif;
+    color: var(--dark-gray-color);
+  }
+
+  img{
+    display: block;
+  }
+
+  .container {
+    width:1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__header-doing{
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.17;
+      text-align: center;
+      letter-spacing: 0.03em;
+      color: getColor("dark-font");
+    }
+    .section-button {
+      padding-bottom: 50px;
+    }
+    .section-project{
+      padding-top: 0;
+    }
+  }

@@ -1,0 +1,46 @@
+.section-clients{
+    margin-top: 94px;
+    margin-bottom: 94px;
+
+    &__header{
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.17;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: getColor("dark-font");
+        margin: 0;
+        margin-bottom: 50px;
+    }
+  }
+
+  .clients-list {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+
+    &__box{
+        width: 170px;
+        height: 92px;
+        background: getColor("light-background");
+        border: 1px solid getColor("svg");
+        border-radius: 4px;
+        fill:getColor("svg");
+        display: block;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-property: fill, border;
+        
+        &:hover,
+        &:focus{
+            border: 1px solid getColor("active");
+            fill: getColor("active");
+        }
+    }
+
+    &__icon{
+        margin: 16px 32px;
+        width: 106px;
+        height:60px;
+    }
+  }

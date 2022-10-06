@@ -1,0 +1,54 @@
+.section-button {
+    padding-bottom: 50px;
+  }
+
+  .portfolio-buttons{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+
+    &:last-child{
+      margin-right: 0px;
+    }
+
+    &__btn{
+      font-family: "Roboto";
+      background: getColor("medium-background");
+      border-radius: 4px;
+      border-color: getColor("medium-background");
+      border-style: solid; /* pozbycie się efektu cienia na przycisku*/
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.62;
+      text-align: center;
+      letter-spacing: 0.03em;
+      cursor:pointer;
+      color: getColor("dark-font");
+      height: 38px;
+      margin-right: 8px;
+      border: none; /* pozbycie się efektu cienia na przycisku*/
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-property: color, background-color, box-shadow, border-color;
+
+      &__btn--big{
+        width: 121px;
+      }
+  
+      &__btn--medium{
+        width: 114px;  
+      }
+  
+      &__btn--big{
+        width: 93px;  
+      }
+
+      &:hover,
+      &:focus{
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        background: getColor("active");
+        border-color: getColor("active");
+        color:getColor("light-background");
+      }
+    }
+  }
