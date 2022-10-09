@@ -4,7 +4,7 @@
       to right,
       rgba(47, 48, 58, 0.4) 0%,
       rgba(47, 48, 58, 0.4) 100%),
-      url(/images/Banner.jpg);
+      url(/images/Banner_1600.jpg);
     ;
     max-width: 1600px;
     margin: 0 auto;
@@ -15,7 +15,7 @@
     display: flex;
     height: 600px;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: column;
 
     &__motto{
@@ -26,7 +26,6 @@
         text-align: center;
         letter-spacing: 0.06em;
         text-transform: uppercase;
-        padding-top: 200px;
         margin-bottom: 30px;
     }
 
@@ -46,5 +45,60 @@
         width: 200px;
         height: 50px;
         cursor: pointer;
+    }
+  }
+
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+
+    .agency-motto {
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%),
+        url(/images/Banner_768.jpg);
+        background-repeat: no-repeat;
+      ;
+
+    .agency-motto-container {
+      height: 400px;
+      width: 100%;
+  
+      &__motto{
+          font-size: 26px;
+      }
+      }
+    }
+    }
+
+  @media (max-width: 767px) {
+
+    .agency-motto {
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%),
+        url(/images/Banner_768.jpg);
+        background-repeat: no-repeat;
+    }
+
+    .agency-motto-container {
+      height: 400px;
+  
+      &__motto{
+          font-size: 26px;
+      }
+      }
+    }
+  
+
+  @media (max-width: 480px) {
+    .agency-motto {
+      background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%),
+        url(/images/Banner_480.jpg);
+        background-repeat: no-repeat;
     }
   }
