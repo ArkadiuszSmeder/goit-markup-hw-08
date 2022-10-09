@@ -143,9 +143,9 @@ color: getColor("active");
       font-size: 12px;
       line-height: 1.14;
     }
+  }  
 
   @media (max-width: 767px) {
-
     .nav {
       display: none;
     }
@@ -154,4 +154,3 @@ color: getColor("active");
       display: none;
     }
   }
-}

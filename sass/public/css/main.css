@@ -489,7 +489,7 @@ img {
     line-height: 1.14;
   }
 }
-@media (min-width: 768px) and (max-width: 1199px) and (max-width: 767px) {
+@media (max-width: 767px) {
   .nav {
     display: none;
   }
