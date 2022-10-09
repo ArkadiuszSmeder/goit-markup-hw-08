@@ -26,7 +26,7 @@
         border: 1px solid getColor("svg");
         border-radius: 4px;
         fill:getColor("svg");
-        display: block;
+        display: flex;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-property: fill, border;
@@ -43,4 +43,21 @@
         width: 106px;
         height:60px;
     }
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+
+    .clients-list {
+        
+      &__box {
+        /*max-width: 354px;
+        flex-basis: calc((100% - 30px) / 2);*/
+        flex-basis: calc(33% - 15px);
+      }
+
+    }
+  }
+
+  @media (max-width: 767px) {
+
   }

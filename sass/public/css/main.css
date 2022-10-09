@@ -454,7 +454,9 @@ img {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
   fill: #AFB1B8;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -472,6 +474,14 @@ img {
   height: 60px;
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .clients-list__box {
+    /*max-width: 354px;
+    flex-basis: calc((100% - 30px) / 2);*/
+    -ms-flex-preferred-size: calc(33% - 15px);
+        flex-basis: calc(33% - 15px);
+  }
+}
 .section-doing {
   padding-top: 0;
 }
