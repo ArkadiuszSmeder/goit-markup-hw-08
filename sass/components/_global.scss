@@ -16,11 +16,32 @@
     display: block;
   }
 
-  .container {
+  /*.container {
     width:1200px;
     margin: 0 auto;
     padding: 0 15px;
-  }
+  }*/
+
+
+  .container {
+
+    margin: 0 auto;
+    padding: 0 15px;
+    width: 1200px;
+    
+     @media (max-width: 1200px) {
+        width: 768px;
+    }
+
+    @media (max-width: 768px) {
+        width: 480px;
+
+    }
+    @media (max-width: 480px) {
+        width: 100%
+    }
+
+}
 
   .section {
     padding-top: 94px;

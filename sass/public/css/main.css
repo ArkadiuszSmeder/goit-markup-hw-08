@@ -217,10 +217,30 @@ img {
   display: block;
 }
 
-.container {
-  width: 1200px;
+/*.container {
+  width:1200px;
   margin: 0 auto;
   padding: 0 15px;
+}*/
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1200px;
+}
+@media (max-width: 1200px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    width: 480px;
+  }
+}
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
 }
 
 .section {
@@ -313,7 +333,6 @@ img {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: #2196f3;
   content: "";
   position: absolute;
   bottom: -32px;
@@ -325,7 +344,7 @@ img {
   color: #2196f3;
 }
 .nav__list--underline:after {
-  color: #2196f3;
+  background-color: #2196f3;
 }
 
 .contact {
@@ -374,47 +393,14 @@ img {
   fill: currentColor;
 }
 
-@media (min-width: 768px) {
-  .page-header {
-    padding: 21px 0 21px 0;
-  }
-  .page-header .container {
-    gap: 83px;
+@media (min-width: 768px) and (max-width: 1199px) {
+  .logo, .logo--blue, .logo--black, .logo--white {
+    font-size: 24px;
+    line-height: 1.38;
   }
   .nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    font-weight: 500;
-    letter-spacing: 0.02em;
-  }
-  .nav__list {
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 250ms;
-            transition-duration: 250ms;
-    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    color: var(--light-grey-color);
-    position: relative;
-  }
-  .nav__list:hover, .nav__list:focus {
-    color: #2196f3;
-  }
-  .nav__list:after {
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: #2196f3;
-    content: "";
-    position: absolute;
-    bottom: -32px;
-    left: 0;
-    background-color: transparent;
+    margin-left: 83px;
+    margin-right: 101px;
   }
   .contact {
     display: -webkit-box;
@@ -424,12 +410,8 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    font-weight: 500;
-    letter-spacing: 0.02em;
     gap: 10px;
-    margin-left: auto;
-    color: #757575;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14;
   }
   .contact__list {
@@ -461,6 +443,14 @@ img {
     width: 10px;
     height: 16px;
     fill: currentColor;
+  }
+}
+@media (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+  .contact {
+    display: none;
   }
 }
 .section-clients {
@@ -555,6 +545,9 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .section-lorem__list {
   display: -webkit-box;
@@ -564,7 +557,8 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 270px;
+  -ms-flex-preferred-size: calc(25% - 30px);
+      flex-basis: calc(25% - 30px);
 }
 .section-lorem__box {
   width: 100%;
@@ -594,44 +588,17 @@ img {
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  .container {
-    max-width: 768px;
-  }
-  .section-lorem {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: unset;
-    -webkit-box-direction: unset;
-        -ms-flex-direction: unset;
-            flex-direction: unset;
-    gap: 30px;
-  }
   .section-lorem__list {
-    max-width: 354px;
-    -ms-flex-preferred-size: calc((100% - 30px) / 2);
-        flex-basis: calc((100% - 30px) / 2);
+    /*max-width: 354px;
+    flex-basis: calc((100% - 30px) / 2);*/
+    -ms-flex-preferred-size: calc(50% - 15px);
+        flex-basis: calc(50% - 15px);
   }
   .section-lorem__box-icon {
     margin: 25px 142px;
   }
 }
 @media (max-width: 767px) {
-  .container {
-    max-width: 480px;
-  }
-  .section-lorem {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 30px;
-  }
   .section-lorem__list {
     width: 450px;
   }
