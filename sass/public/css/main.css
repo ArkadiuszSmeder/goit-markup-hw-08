@@ -507,6 +507,16 @@ img {
           justify-content: center;
 }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .section-doing {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .section-doing {
+    display: none;
+  }
+}
 .section-lorem {
   list-style-type: none;
   display: -webkit-box;
