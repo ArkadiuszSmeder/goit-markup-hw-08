@@ -18,6 +18,8 @@
     display: flex;
     justify-content: space-between;
     list-style-type: none;
+    flex-wrap: wrap;
+    gap: 30px;
 
     &__box{
         width: 170px;
@@ -48,16 +50,33 @@
   @media (min-width: 768px) and (max-width: 1199px) {
 
     .clients-list {
-        
-      &__box {
-        /*max-width: 354px;
-        flex-basis: calc((100% - 30px) / 2);*/
-        flex-basis: calc(33% - 15px);
+      &__element {
+        flex-basis: calc(33% - 30px);
       }
 
+      &__box{
+        width: 226px;
     }
-  }
+
+    &__icon{
+        margin: 16px 60px;
+    }
+    }
+}
 
   @media (max-width: 767px) {
 
-  }
+    .clients-list {
+        &__element {
+          flex-basis: calc(50% - 30px);
+        }
+
+        &__box{
+            width: 210px;
+        }
+
+        &__icon{
+            margin: 16px 52px;
+        }
+      }
+    }
