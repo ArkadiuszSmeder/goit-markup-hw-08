@@ -17,12 +17,11 @@
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 
     &__card{
         width: 270px;
-        height: 428px;
-        left: 215px;
-        top: 1635px;
         background: getColor("light-background");
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
           0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -47,6 +46,11 @@
         color: getColor("light-font");
         margin: 0;
     }
+
+    &__picture{
+        width: 100%;
+    }
+
   }
 
 
@@ -101,4 +105,34 @@
             fill: getColor("light-background");
         }
     }
+  }
+
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .team-list{
+        &__card{
+            flex-basis: calc(50% - 15px);
+        }
+    }
+
+    
+  .socialmedia-box {
+    margin-bottom: 24px;
+    margin-left: 74px;
+    }
+}        
+
+  @media (max-width: 767px) {
+    .team-list{
+        &__card{
+            flex-basis: 100%;
+        }
+    }
+
+    .socialmedia-box {
+        margin-bottom: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+
   }

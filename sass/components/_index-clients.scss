@@ -73,6 +73,7 @@
 
         &__box{
             width: 210px;
+            margin: auto;
         }
 
         &__icon{
@@ -80,3 +81,21 @@
         }
       }
     }
+
+    @media (max-width: 480px) {
+
+      .clients-list {
+          &__element {
+            flex-basis: 100%;
+          }
+  
+          &__box{
+              width: 210px;
+              margin: auto;
+          }
+  
+          &__icon{
+              margin: 16px 52px;
+          }
+        }
+      }
