@@ -521,6 +521,10 @@ img {
   fill: currentColor;
 }
 
+.header-container-button {
+  display: none;
+}
+
 @media (min-width: 768px) and (max-width: 1199px) {
   .logo, .logo--blue, .logo--black, .logo--white {
     font-size: 24px;
@@ -542,6 +546,9 @@ img {
     font-size: 12px;
     line-height: 1.14;
   }
+  .header-container-button {
+    display: none;
+  }
 }
 @media (max-width: 767px) {
   .nav {
@@ -549,6 +556,42 @@ img {
   }
   .contact {
     display: none;
+  }
+  .page-header .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .header-container-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    border-style: none;
+    background: none;
+  }
+  .header-container-button:hover, .header-container-button:focus {
+    color: #2196f3;
+  }
+  .header-container-button__svg {
+    -webkit-transition-property: fill;
+    transition-property: fill;
+    -webkit-transition-duration: 250ms;
+            transition-duration: 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    fill: #212121;
+  }
+  .header-container-button__svg:hover, .header-container-button__svg:focus {
+    color: #2196f3;
   }
 }
 .section-clients {
@@ -1428,4 +1471,171 @@ img {
   letter-spacing: 0.03em;
   color: #757575;
   margin-left: 24px;
+}
+
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: #fff;
+  z-index: 9;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+.mobile.is-open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.mobile__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-height: 40px;
+  max-width: 40px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border-style: none;
+}
+.mobile__button:hover .mobile__button-svg, .mobile__button:focus .mobile__button-svg {
+  fill: #2196f3;
+  background-color: #2196f3;
+}
+.mobile__button-svg {
+  -webkit-transition-property: background-color, fill;
+  transition-property: background-color, fill;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  fill: #212121;
+  max-height: 40px;
+  max-width: 40px;
+}
+.mobile__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 64px;
+  position: absolute;
+  top: 48px;
+  left: 40px;
+  right: 48px;
+}
+.mobile__container-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 36px;
+  padding-bottom: 238px;
+  list-style: none;
+}
+.mobile__container-nav-link {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #212121;
+  text-decoration: none;
+}
+.mobile__container-nav-link:hover, .mobile__container-nav-link:focus {
+  color: #2196f3;
+}
+.mobile__container-contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+  list-style: none;
+}
+.mobile__container-contacts-link {
+  -webkit-transition-property: font-size, line-height, color;
+  transition-property: font-size, line-height, color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #757575;
+  /*&:hover,
+  &:focus {
+    line-height: 1.12;
+    color: getColor("active");
+  }*/
+}
+.mobile__container-contacts-phone {
+  line-height: 1.12;
+  font-size: 34px;
+  color: #2196f3;
+}
+.mobile__container-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  list-style: none;
+}
+.mobile__container-socials-list {
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+.mobile__container-socials-list:last-child {
+  border-right: none;
+}
+.mobile__container-socials-list-link {
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 250ms;
+          transition-duration: 250ms;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: block;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+  padding-right: 10px;
+  text-decoration: none;
+}
+.mobile__container-socials-list-link:hover, .mobile__container-socials-list-link:focus {
+  color: #2196f3;
 }/*# sourceMappingURL=main.css.map */

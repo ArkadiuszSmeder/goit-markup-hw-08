@@ -122,6 +122,10 @@ color: getColor("active");
     }
   }
 
+  .header-container-button{
+    display: none;
+  }
+
 
 
   @media (min-width: 768px) and (max-width: 1199px) {
@@ -143,6 +147,11 @@ color: getColor("active");
       font-size: 12px;
       line-height: 1.14;
     }
+
+    .header-container-button{
+      display: none;
+    }
+    
   }  
 
   @media (max-width: 767px) {
@@ -153,4 +162,40 @@ color: getColor("active");
     .contact {
       display: none;
     }
-  }
+
+    .page-header {
+      .container {
+          justify-content: space-between;
+        }
+      }
+
+    .header-container-button{
+      display: flex;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      margin-left: auto;
+      border-style: none;
+      background: none;
+    
+      &:hover,
+      &:focus{
+          color: getColor("active")
+      }
+    
+      &__svg{
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        fill: getColor("dark-font");
+
+        &:hover,
+        &:focus{
+            color: getColor("active")
+        }
+      }
+    }
+    }
