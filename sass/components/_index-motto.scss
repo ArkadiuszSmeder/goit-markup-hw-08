@@ -1,104 +1,119 @@
 .agency-motto {
-    background-position: center;
-    background-image: linear-gradient(
+  background-position: center;
+  background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.4) 0%,
-      rgba(47, 48, 58, 0.4) 100%),
-      url(/images/Banner_1600.jpg);
-    ;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding: 0;
-  } 
+      rgba(47, 48, 58, 0.4) 100%
+    ),
+    url(/images/Banner_1600.jpg);
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0;
+}
 
-  .agency-motto-container {
-    display: flex;
-    height: 600px;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.agency-motto-container {
+  display: flex;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
-    &__motto{
-        color:getColor("light-background");
-        font-weight: 900;
-        font-size: 44px;
-        line-height: 1.36;
-        text-align: center;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        margin-bottom: 30px;
-    }
-
-    &__button{
-        font-family: "Roboto";
-        color:getColor("light-background");
-        background-color: getColor("active");
-        border-color: getColor("active");
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-        border-radius: 4px;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 1.88;
-        text-align: center;
-        align-items: center;
-        letter-spacing: 0.06em;
-        width: 200px;
-        height: 50px;
-        cursor: pointer;
-    }
+  &__motto {
+    color: getColor("light-background");
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
   }
 
+  &__button {
+    font-family: "Roboto";
+    color: getColor("light-background");
+    background-color: getColor("active");
+    border-color: getColor("active");
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: center;
+    align-items: center;
+    letter-spacing: 0.06em;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+  }
+}
 
-  @media (min-width: 768px) and (max-width: 1199px) {
-
-    .agency-motto {
-      background-image: linear-gradient(
+@media (min-width: 768px) and (max-width: 1199px) {
+  .agency-motto {
+    background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4) 0%,
-        rgba(47, 48, 58, 0.4) 100%),
-        url(/images/Banner_768.jpg);
-        background-repeat: no-repeat;
-      ;
-
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url(/images/Banner_768.jpg);
+    background-repeat: no-repeat;
+    width: 768px;
     .agency-motto-container {
       height: 400px;
       width: 100%;
-  
-      &__motto{
-          font-size: 26px;
-      }
-      }
-    }
-    }
 
-  @media (max-width: 767px) {
-
-    .agency-motto {
-      background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4) 0%,
-        rgba(47, 48, 58, 0.4) 100%),
-        url(/images/Banner_768.jpg);
-        background-repeat: no-repeat;
-    }
-
-    .agency-motto-container {
-      height: 400px;
-  
-      &__motto{
-          font-size: 26px;
+      &__motto {
+        font-size: 26px;
       }
-      }
-    }
-  
-
-  @media (max-width: 480px) {
-    .agency-motto {
-      background-image: linear-gradient(
-        to right,
-        rgba(47, 48, 58, 0.4) 0%,
-        rgba(47, 48, 58, 0.4) 100%),
-        url(/images/Banner_480.jpg);
-        background-repeat: no-repeat;
     }
   }
+}
+
+@media (max-width: 767px) {
+  .agency-motto {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url(/images/Banner_768.jpg);
+    background-repeat: no-repeat;
+    width: 480px;
+  }
+
+  .agency-motto-container {
+    height: 400px;
+
+    &__motto {
+      font-size: 26px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .agency-motto {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url(/images/Banner_480.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .agency-motto {
+    background: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 100%
+      ),
+      url(/images/Banner_1600.jpg), no-repeat;
+    background-size: 100% 100%;
+  }
+}

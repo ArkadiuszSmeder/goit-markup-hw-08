@@ -331,7 +331,15 @@
           box-sizing: border-box;
 }
 
-ul, p, figure, h1, h2, h3, h4, h5, h6 {
+ul,
+p,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -346,10 +354,10 @@ img {
 }
 
 /*.container {
-  width:1200px;
-  margin: 0 auto;
-  padding: 0 15px;
-}*/
+    width:1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }*/
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -865,6 +873,7 @@ img {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/Banner_768.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(/images/Banner_768.jpg);
     background-repeat: no-repeat;
+    width: 768px;
   }
   .agency-motto .agency-motto-container {
     height: 400px;
@@ -879,6 +888,7 @@ img {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/Banner_768.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(/images/Banner_768.jpg);
     background-repeat: no-repeat;
+    width: 480px;
   }
   .agency-motto-container {
     height: 400px;
@@ -892,10 +902,18 @@ img {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/Banner_480.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(/images/Banner_480.jpg);
     background-repeat: no-repeat;
+    width: 100%;
+  }
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .agency-motto {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(/images/Banner_1600.jpg), no-repeat;
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4) 0%, rgba(47, 48, 58, 0.4) 100%), url(/images/Banner_1600.jpg), no-repeat;
+    background-size: 100% 100%;
   }
 }
 .section-team {
-  background: #F5F4FA;
+  background: #f5f4fa;
 }
 .section-team__header {
   font-weight: 700;
@@ -981,7 +999,7 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-color: #fff;
-  fill: #AFB1B8;
+  fill: #afb1b8;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -1591,10 +1609,10 @@ img {
   text-decoration: none;
   color: #757575;
   /*&:hover,
-  &:focus {
-    line-height: 1.12;
-    color: getColor("active");
-  }*/
+    &:focus {
+      line-height: 1.12;
+      color: getColor("active");
+    }*/
 }
 .mobile__container-contacts-phone {
   line-height: 1.12;
